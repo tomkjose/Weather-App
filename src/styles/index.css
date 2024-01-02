@@ -1,0 +1,9 @@
+@tailwind base;
+body {
+  background-color: #131215;
+  color: white;
+}
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
