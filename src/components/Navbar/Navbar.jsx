@@ -1,5 +1,4 @@
 import React from "react";
-import Searchbar from "../Searchbar/Searchbar";
 import CurrentLocation from "../CurrentLocation/CurrentLocation";
 
 function Navbar() {

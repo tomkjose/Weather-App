@@ -41,7 +41,7 @@ function CurrentWeather() {
           ""
         )}
       </div>
-      <div className="flex items-center  text-subtitle">
+      <div className="flex items-center ">
         <FontAwesomeIcon icon={faLocationDot} size="sm" className="pr-4" />
         {current &&
         current.weather &&
@@ -49,8 +49,8 @@ function CurrentWeather() {
         forecast &&
         forecast.city &&
         forecast.city.name.length > 0 ? (
-          <span>
-            {forecast.city.name},{current.sys.country}
+          <span className="text-subtitle">
+            {forecast.city.name}, {current.sys.country}
           </span>
         ) : (
           ""

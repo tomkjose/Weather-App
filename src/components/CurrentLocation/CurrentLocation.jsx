@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { getCurrentLocation } from "../../utils/helper";
 import { useDispatch } from "react-redux";
 import { setLocation } from "../../redux/locationRedux/locAction";

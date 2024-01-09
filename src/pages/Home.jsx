@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import CurrentWeather from "../components/CurrentWeather/CurrentWeather";
 import FiveDayForecast from "../components/FiveDayForecast/FiveDayForecast";
 import TodayHighlights from "../components/TodayHighlights/TodayHighlights";
@@ -9,24 +9,27 @@ import { fetchWeatherData } from "../redux/weatherRedux/weatherAction";
 function Home() {
   const { latitude, longitude } = useSelector((state) => state.location);
   const dispatch = useDispatch();
-  // const { current, forecast, airPollution } = useSelector(
-  //   (state) => state.weather
-  // );
+  const weather = useSelector((state) => state.weather);
   useEffect(() => {
     dispatch(fetchWeatherData(latitude, longitude));
-  }, [latitude, longitude]);
+  }, [latitude, longitude, dispatch]);
 
-  // console.log("forcastWeather", forcastWeather);
   return (
-    <div className="flex p-8 pt-0 lg:flex-col">
-      <aside className="w-1/4  lg:w-full mb-8 mr-8 ml-0 md:w-full mb-8 mr-8   ">
-        <CurrentWeather />
-        <FiveDayForecast />
-      </aside>
-      <main className="ml-8 w-3/4 xl:ml-0 lg:w-full ml-0 md:w-full ml-0">
-        <TodayHighlights />
-        <ThreeHourForecast />
-      </main>
+    <div>
+      {weather.forecast ? (
+        <div className="flex p-8 pt-0 lg:flex-col">
+          <aside className="w-1/4  lg:w-full mb-8 mr-8 ml-0 md:w-full mb-8 mr-8   ">
+            <CurrentWeather />
+            <FiveDayForecast />
+          </aside>
+          <main className="ml-8 w-3/4 xl:ml-0 lg:w-full ml-0 md:w-full ml-0">
+            <TodayHighlights />
+            <ThreeHourForecast />
+          </main>
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }

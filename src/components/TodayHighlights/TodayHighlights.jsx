@@ -8,7 +8,6 @@ import {
   faSun,
   faTemperatureLow,
   faTint,
-  faTachometerSlowest,
   faWind,
 } from "@fortawesome/free-solid-svg-icons";
 
