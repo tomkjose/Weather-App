@@ -1,8 +1,8 @@
 import { SET_LOCATION } from "./locAction";
 
 const initialState = {
-  latitude: 51.5072,
-  longitude: 0.1276,
+  latitude: JSON.parse(localStorage.getItem("latitude")) ?? 51.5072,
+  longitude: JSON.parse(localStorage.getItem("longitude")) ?? 0.1276,
 };
 
 const locationReducer = (state = initialState, action) => {
