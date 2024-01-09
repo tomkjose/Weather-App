@@ -11,7 +11,7 @@ function ThreeHourForecast() {
   // console.log("forecasts", forecasts);
   return (
     <div className="flex flex-col">
-      <h3 className="my-8">Today At</h3>
+      <h3 className="my-8 font-bold text-lg">Today At</h3>
       <div className="flex flex-col overflow-x-hidden  xl:overflow-x-auto md:overflow-x-auto">
         <div className="flex ">
           {forecasts

@@ -39,9 +39,9 @@ function TodayHighlights() {
 
   return (
     <div className="bg-cardColor rounded-3xl p-8">
-      <h3> Today Highlights</h3>
+      <h3 className="font-bold text-lg"> Today Highlights</h3>
       <div className="flex items-center xl:flex-col  md:flex-col ">
-        <div className="w-1/2 bg-bgCard rounded-3xl p-8 my-8  mr-4 xl:w-full mr-0 ">
+        <div className="w-1/2 bg-bgCard rounded-3xl p-8 my-8  mr-4 xl:w-full mr-0  md:mr-0 ">
           <div className="flex justify-between p-4">
             <h4 className="text-subtitle">Air Quality Index</h4>
             {aqiText ? (
