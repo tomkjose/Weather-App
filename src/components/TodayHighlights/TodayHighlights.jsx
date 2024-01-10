@@ -41,8 +41,8 @@ function TodayHighlights() {
     <div className="bg-cardColor rounded-3xl p-8">
       <h3 className="font-bold text-lg"> Today Highlights</h3>
       <div className="flex items-center xl:flex-col  md:flex-col ">
-        <div className="w-1/2 bg-bgCard rounded-3xl p-8 my-8  mr-4 xl:w-full mr-0  md:mr-0 ">
-          <div className="flex justify-between p-4">
+        <div className="w-1/2 bg-bgCard rounded-3xl p-8 my-8  mr-4 xl:w-full mr-0  md:mr-0  p-2 ">
+          <div className="flex justify-between p-4 md:p-2">
             <h4 className="text-subtitle">Air Quality Index</h4>
             {aqiText ? (
               <div
@@ -62,7 +62,7 @@ function TodayHighlights() {
             />
             <div className="flex md:flex-col">
               <div className="flex  p-4">
-                <div className="flex flex-col  p-4 md:flex-row">
+                <div className="flex flex-col  p-4  ">
                   {
                     <div className="text-subtitle  md:pr-4">
                       PM<sub>2.5</sub>
@@ -76,7 +76,7 @@ function TodayHighlights() {
                     ""
                   )}
                 </div>
-                <div className="flex flex-col  p-4 md:flex-row">
+                <div className="flex flex-col  p-4  ">
                   <div className="text-subtitle  md:pr-4">
                     So<sub>2</sub>
                   </div>
@@ -90,7 +90,7 @@ function TodayHighlights() {
                 </div>
               </div>
               <div className="flex p-4">
-                <div className="flex flex-col  p-4 md:flex-row">
+                <div className="flex flex-col  p-4  ">
                   <div className="text-subtitle  md:pr-4">
                     No<sub>2</sub>
                   </div>
@@ -102,7 +102,7 @@ function TodayHighlights() {
                     ""
                   )}
                 </div>
-                <div className="flex flex-col  p-4 md:flex-row">
+                <div className="flex flex-col  p-4  ">
                   <div className="text-subtitle  md:pr-4">
                     O<sub>3</sub>
                   </div>
@@ -121,7 +121,7 @@ function TodayHighlights() {
         <div className=" w-1/2 p-8 md:p-0 bg-bgCard rounded-3xl  xl:w-full m-2">
           <h4 className="py-4 px-4 text-subtitle">Sunrise & Sunset</h4>
           <div className="flex p-8 md:justify-between">
-            <div className="flex w-1/2 items-center px-4">
+            <div className="flex   w-1/2 items-center px-4  md:w-full pb-4 px-0  ">
               <FontAwesomeIcon
                 icon={faSun}
                 style={{ color: "#ffffff", paddingRight: "1.2rem" }}
@@ -138,7 +138,7 @@ function TodayHighlights() {
                 )}
               </div>
             </div>
-            <div className="flex  items-center ">
+            <div className="w-1/2 flex items-center  md:w-full   ">
               <FontAwesomeIcon
                 icon={faMoon}
                 style={{ color: "#ffffff", paddingRight: "1.2rem" }}
