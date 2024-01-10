@@ -5,7 +5,7 @@ import TodayHighlights from "../components/TodayHighlights/TodayHighlights";
 import ThreeHourForecast from "../components/ThreeHourForecast/ThreeHourForecast";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeatherData } from "../redux/weatherRedux/weatherAction";
-
+import Loading from "../components/Loading/Loading";
 function Home() {
   const { latitude, longitude } = useSelector((state) => state.location);
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div>
-      {weather.forecast ? (
+      {weather.forecast.list ? (
         <div className="flex p-8 pt-0 lg:flex-col">
           <aside className="w-1/4  lg:w-full mb-8 mr-8 ml-0 md:w-full mb-8 mr-8   ">
             <CurrentWeather />
@@ -28,7 +28,9 @@ function Home() {
           </main>
         </div>
       ) : (
-        <div></div>
+        <div className="p-8 flex justify-center">
+          <Loading />
+        </div>
       )}
     </div>
   );
