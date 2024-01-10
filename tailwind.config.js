@@ -6,7 +6,6 @@ module.exports = {
       md: { max: "767px" },
       lg: { max: "1179px" },
       xl: { max: "1279px" },
-      "2xl": { max: "1535px" },
     },
     colors: {
       disabledText: "#7b7980",

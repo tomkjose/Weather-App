@@ -42,11 +42,11 @@ function TodayHighlights() {
       <h3 className="font-bold text-lg"> Today Highlights</h3>
       <div className="flex items-center xl:flex-col  md:flex-col ">
         <div className="w-1/2 bg-bgCard rounded-3xl p-8 my-8  mr-4 xl:w-full mr-0  md:mr-0  p-2 ">
-          <div className="flex justify-between p-4 md:p-2">
+          <div className="flex justify-between p-4 md:p-0">
             <h4 className="text-subtitle">Air Quality Index</h4>
             {aqiText ? (
               <div
-                className={`${airQualityClass} text-textAirStatus rounded-3xl px-2 `}
+                className={`${airQualityClass} text-textAirStatus rounded-3xl px-2 flex items-center`}
               >
                 {aqiText}
               </div>
@@ -120,7 +120,7 @@ function TodayHighlights() {
         </div>
         <div className=" w-1/2 p-8 md:p-0 bg-bgCard rounded-3xl  xl:w-full m-2">
           <h4 className="py-4 px-4 text-subtitle">Sunrise & Sunset</h4>
-          <div className="flex p-8 md:justify-between">
+          <div className="flex p-8  md:justify-between px-4">
             <div className="flex   w-1/2 items-center px-4  md:w-full pb-4 px-0  ">
               <FontAwesomeIcon
                 icon={faSun}
